@@ -1,0 +1,7 @@
+{
+  "name": "appTdea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
