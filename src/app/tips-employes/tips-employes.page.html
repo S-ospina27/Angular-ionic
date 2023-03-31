@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Consejos</ion-title>
+  </ion-toolbar>
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <P>
+   Que debe contener  un buen empleado y que debes de tener encuenta: <ion-icon name="glasses-outline"></ion-icon>
+  </P>
+  <ion-card color="primary">
+    <ion-card-content align="center"> SER DEDICADO </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary"  align="center">
+    <ion-card-content> TENER CONFIANZA </ion-card-content>
+  </ion-card>
+
+  <ion-card color="success"  align="center">
+    <ion-card-content> TRABAJO EN EQUIPO </ion-card-content>
+  </ion-card>
+
+  <ion-card color="warning">
+
+    <ion-card-content  align="center">LIDERAZGO </ion-card-content>
+  </ion-card>
+
+  <ion-card color="danger">
+    <ion-card-content  align="center"> ADAPTABILIDAD </ion-card-content>
+  </ion-card>
+ <div>
+   <ion-button style="margin: 10% 0 0 5%" [routerLink]="['/add-employes']">
+    REGISTRAR PROPUESTA
+    <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+  </ion-button>
+ </div>
+</ion-content>

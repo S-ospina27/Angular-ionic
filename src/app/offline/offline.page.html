@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+  <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <H1 align="center" style="font-weight: bold;">EMPLEOCLUB</H1>
+  <img
+    style="border-radius: 5%; margin: 7% 0% 0% 5%"
+    width="85%"
+    alt="Silhouette of mountains"
+    src="assets/img/employes.webp"
+  />
+  <p style="font-size: 12px;">
+    ¿Que buscar para tu empresa? te invitamos a que con nosotros encuentres el
+    mejor candidato para ese cargo que desea suplir Animate <a  style="color:#1D95EE; cursor: pointer;" href="register">registrarte!</a>
+  </p>
+
+  <ion-button style="margin: 10% 0 0 23%" [routerLink]="['/login']">
+    INGRESAR
+    <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+  </ion-button>
+</ion-content>

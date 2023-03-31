@@ -1,20 +1,44 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title> Listar Registros </ion-title>
   </ion-toolbar>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  />
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Listar Registros</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="row">
+    <ion-button  color="success"style="margin: 10% 3% 5% 3%" [routerLink]="['/add-employes']">
+      Ingresar
+      <ion-icon slot="start" name="arrow-back-circle-outline"></ion-icon>
+    </ion-button>
+    
+    <ion-button  color="medium"style="margin: 10% 3% 5% 4%" [routerLink]="['/offline']">
+      SALIR
+      <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+    </ion-button>
   </div>
+  <ion-list *ngFor="let post  of posts">
+    <h4 align="center">{{post.title}}</h4>
+    <ion-card color="tertiary" style="cursor: pointer">
+      <ion-card-content align="center">
+        <h6 style="font-size: 17px">
+          <ion-icon name="bag-remove-sharp"></ion-icon> {{post.area}}
+        </h6>
+        <h6 style="font-size: 17px">
+          <ion-icon name="school-sharp"></ion-icon> {{post.experience}}
+        </h6>
+        <h6 style="font-size: 17px">
+          <ion-icon name="timer-sharp"></ion-icon> {{post.schedule}}
+        </h6>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

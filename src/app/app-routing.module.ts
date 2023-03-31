@@ -8,8 +8,28 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'offline',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'offline',
+    loadChildren: () => import('./offline/offline.module').then( m => m.OfflinePageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'add-employes',
+    loadChildren: () => import('./add-employes/add-employes.module').then( m => m.AddEmployesPageModule)
+  },
+  {
+    path: 'tips-employes',
+    loadChildren: () => import('./tips-employes/tips-employes.module').then( m => m.TipsEmployesPageModule)
   },
 ];
 

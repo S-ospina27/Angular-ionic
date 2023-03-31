@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login </ion-title>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+ 
+  <h1 align="center" style="font-weight: bold" >Hola!!</h1>
+  <img
+    style="border-radius: 70%; margin: 10px 0px 5px 30%"
+    width="35%"
+    alt="Silhouette of mountains"
+    src="assets/img/logo.avif"
+  />
+  <ion-list>
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="person-circle-outline"></ion-icon> Usuario</ion-label
+      >
+      <ion-input
+        type="text"
+        placeholder="ingrese usuario"
+        minlength="3"
+        maxlength="256"
+        [(ngModel)]="user.email"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        contraseña
+      </ion-label>
+
+      <ion-input
+        type="password"
+        placeholder="ingrese contraseña"
+        minlength="3"
+        maxlength="10"
+        [(ngModel)]="user.password"
+        required
+      ></ion-input>
+
+    </ion-item>
+
+    <ion-button style="margin: 10% 0 0 20%" (click)="Login(user)" >
+      INGRESAR
+      <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-list>
+</ion-content>

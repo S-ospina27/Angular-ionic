@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Agregar Ofertas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true" class="ion-padding">
+ 
+  <img
+style="border-radius: 10%; margin: 5% 0% 5% 15%"
+width="65%"
+alt="Silhouette of mountains"
+src="assets/img/addEmployes.avif"
+/>
+  <ion-list>
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="newspaper-sharp"></ion-icon> Nombre de oferta</ion-label
+      >
+      <ion-input
+        type="text"
+        placeholder="ingrese oferta"
+        maxlength="256"
+        required
+        [(ngModel)]="addEmployesModel.title"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="bag-remove-sharp"></ion-icon>
+        Area de la oferta
+      </ion-label>
+
+      <ion-input
+        type="text"
+        placeholder="ingrese Area"
+        maxlength="25"
+        required
+        [(ngModel)]="addEmployesModel.area"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="school-sharp"></ion-icon>
+        Experiencia requerida
+      </ion-label>
+
+      <ion-input
+        type="text"
+        placeholder="ingrese Experiencia"
+        maxlength="20"
+        required
+        [(ngModel)]="addEmployesModel.experience"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="timer-sharp"></ion-icon>
+       Horario laboral
+      </ion-label>
+
+      <ion-input
+        type="text"
+        placeholder="ingrese horario"
+        maxlength="10"
+        required
+        [(ngModel)]="addEmployesModel.schedule"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button style="margin: 10% 0 0 20%" (click)="registerEmployes(addEmployesModel)">
+      INGRESAR
+      <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-list>
+</ion-content>
